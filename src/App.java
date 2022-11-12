@@ -3,6 +3,13 @@ import CarpetCostCalculator.Calculator;
 import CarpetCostCalculator.Carpet;
 import CarpetCostCalculator.Floor;
 import ComplexOperations.ComplexNumber;
+import Inheritance.Animal;
+import Inheritance.Circle.Circle;
+import Inheritance.Circle.Cylinder;
+import Inheritance.Dog;
+import Inheritance.Fish;
+import Inheritance.Rectangle.Cuboid;
+import Inheritance.Rectangle.Rectangle;
 import VipCustomer.VipCustomer;
 import WallArea.Wall;
 
@@ -60,5 +67,36 @@ public class App {
         number.subtract(one);
         System.out.println("number.real= " + number.getReal());
         System.out.println("number.imaginary= " + number.getImaginary());
+
+
+        Animal animal = new Animal("Zebra", 1, 1, 170, 65);
+        Dog dog = new Dog("Pitbull", 1, 30,2,4,20,"short fur");
+        dog.eat();
+        Fish fish = new Fish("Nemo", 10, 2, 2, 8, 100);
+        fish.move(15);
+        fish.swim(15);
+
+        Circle circle = new Circle(3.75);
+        System.out.println("circle.radius= " + circle.getRadius());
+        System.out.println("circle.area= " + circle.getArea());
+        Cylinder cylinder = new Cylinder(5.55, 7.25);
+        System.out.println("cylinder.radius= " + cylinder.getRadius());
+        System.out.println("cylinder.height= " + cylinder.getHeight());
+        System.out.println("cylinder.area= " + cylinder.getArea());
+        System.out.println("cylinder.volume= " + cylinder.getVolume());
+
+        Rectangle rectangle = new Rectangle(5, 10);
+        System.out.println("rectangle.width= " + rectangle.getWidth());
+        System.out.println("rectangle.length= " + rectangle.getLength());
+        System.out.println("rectangle.area= " + rectangle.getArea());
+        Cuboid cuboid = new Cuboid(5,10,5);
+        System.out.println("cuboid.width= " + cuboid.getWidth());
+        System.out.println("cuboid.length= " + cuboid.getLength());
+        System.out.println("cuboid.area= " + cuboid.getArea());
+        System.out.println("cuboid.height= " + cuboid.getHeight());
+        System.out.println("cuboid.volume= " + cuboid.getVolume());
+
+
+
     }
 }
