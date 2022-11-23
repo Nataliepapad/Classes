@@ -3,6 +3,14 @@ import CarpetCostCalculator.Calculator;
 import CarpetCostCalculator.Carpet;
 import CarpetCostCalculator.Floor;
 import ComplexOperations.ComplexNumber;
+import Composition.Dimensions;
+import Composition.Furniture;
+import Composition.Room;
+import Composition.Window;
+import CompositionExercise.Bed;
+import CompositionExercise.Bedroom;
+import CompositionExercise.Ceiling;
+import CompositionExercise.Lamp;
 import Inheritance.Animal;
 import Inheritance.Circle.Circle;
 import Inheritance.Circle.Cylinder;
@@ -96,7 +104,31 @@ public class App {
         System.out.println("cuboid.height= " + cuboid.getHeight());
         System.out.println("cuboid.volume= " + cuboid.getVolume());
 
+        Composition.Wall bedroomWall = new Composition.Wall(20,15);
+        Window bedroomWindow = new Window(3);
+        Furniture bedroomFurniture = new Furniture("Bed");
+        Dimensions bedroomDimensions = new Dimensions(20, 30);
+        bedroomDimensions.getArea();
+        Room bedroom = new Room("Bedroom", bedroomWall, bedroomWindow, bedroomFurniture, bedroomDimensions);
+
+        bedroom.openWindows();
+        bedroom.paintWall();
 
 
+        CompositionExercise.Wall wall1 = new CompositionExercise.Wall("West");
+        CompositionExercise.Wall wall2 = new CompositionExercise.Wall("East");
+        CompositionExercise.Wall wall3 = new CompositionExercise.Wall("South");
+        CompositionExercise.Wall wall4 = new CompositionExercise.Wall("North");
+
+        Ceiling ceiling = new Ceiling(12, 55);
+
+        Bed bed = new Bed("Modern", 4, 3, 2, 1);
+
+        Lamp lamp = new Lamp("Classic", false, 75);
+
+        Bedroom newBedroom = new Bedroom("My Bedroom", wall1, wall2, wall3, wall4, ceiling, bed, lamp);
+        newBedroom.makeBed();
+
+        newBedroom.getLamp().turnOn();
     }
 }
