@@ -11,6 +11,7 @@ import CompositionExercise.Bed;
 import CompositionExercise.Bedroom;
 import CompositionExercise.Ceiling;
 import CompositionExercise.Lamp;
+import Encapsulation.Printer;
 import Inheritance.Animal;
 import Inheritance.Circle.Circle;
 import Inheritance.Circle.Cylinder;
@@ -45,6 +46,8 @@ public class App {
         VipCustomer person3 = new VipCustomer("George", 20000, "george@email.com");
         System.out.println(person3.getEmail());
 
+        System.out.println("_____________________________________");
+
         Wall newWall1 = new Wall(2,4);
         System.out.println(newWall1.getArea());
 
@@ -64,6 +67,8 @@ public class App {
         calculator = new Calculator(floor, carpet);
         System.out.println("total cost= " + calculator.getTotalCost());
 
+        System.out.println("_____________________________________");
+
         ComplexNumber one = new ComplexNumber(1.0, 1.0);
         ComplexNumber number = new ComplexNumber(2.5, -1.5);
         one.add(1,1);
@@ -76,6 +81,7 @@ public class App {
         System.out.println("number.real= " + number.getReal());
         System.out.println("number.imaginary= " + number.getImaginary());
 
+        System.out.println("_____________________________________");
 
         Animal animal = new Animal("Zebra", 1, 1, 170, 65);
         Dog dog = new Dog("Pitbull", 1, 30,2,4,20,"short fur");
@@ -83,6 +89,8 @@ public class App {
         Fish fish = new Fish("Nemo", 10, 2, 2, 8, 100);
         fish.move(15);
         fish.swim(15);
+
+        System.out.println("_____________________________________");
 
         Circle circle = new Circle(3.75);
         System.out.println("circle.radius= " + circle.getRadius());
@@ -104,6 +112,8 @@ public class App {
         System.out.println("cuboid.height= " + cuboid.getHeight());
         System.out.println("cuboid.volume= " + cuboid.getVolume());
 
+        System.out.println("_____________________________________");
+
         Composition.Wall bedroomWall = new Composition.Wall(20,15);
         Window bedroomWindow = new Window(3);
         Furniture bedroomFurniture = new Furniture("Bed");
@@ -114,6 +124,7 @@ public class App {
         bedroom.openWindows();
         bedroom.paintWall();
 
+        System.out.println("_____________________________________");
 
         CompositionExercise.Wall wall1 = new CompositionExercise.Wall("West");
         CompositionExercise.Wall wall2 = new CompositionExercise.Wall("East");
@@ -130,5 +141,22 @@ public class App {
         newBedroom.makeBed();
 
         newBedroom.getLamp().turnOn();
+
+        System.out.println("_____________________________________");
+
+        Printer printer = new Printer(50, true);
+        printer.fillUpToner(30);
+        System.out.println("New toner level is: "+ printer.getTonerLevel());
+
+        printer.fillUpToner(30);
+        printer.printPages(31);
+        printer.printPages(13);
+
+        Printer printer2 = new Printer(50, false);
+        printer2.fillUpToner(50);
+        System.out.println("New toner level is: "+ printer2.getTonerLevel());
+
+        printer2.printPages(31);
+        printer2.printPages(10);
     }
 }
