@@ -158,5 +158,8 @@ public class App {
 
         printer2.printPages(31);
         printer2.printPages(10);
+
+        System.out.println("_____________________________________");
+
     }
 }

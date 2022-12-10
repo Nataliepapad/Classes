@@ -69,7 +69,7 @@ public class BankAccount {
 
     public void withdraw(double withdrawalAmount){
         if(withdrawalAmount > this.balance){
-            System.out.println("Non-Sufficient Funds in your account");
+            System.out.println("Non-Sufficient Funds in your account. You have: " + this.balance + "€ remaining");
         } else {
              this.balance -= withdrawalAmount;
              System.out.println(withdrawalAmount + " withdrawn from your account. New balance= " + this.balance);
