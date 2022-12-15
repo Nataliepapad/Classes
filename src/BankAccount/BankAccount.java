@@ -21,6 +21,10 @@ public class BankAccount {
         this.phoneNumber = phoneNumber;
     }
 
+    public BankAccount(String customerName, String email, int phoneNumber){
+        this(0000, 0000.00, customerName, email, phoneNumber);
+    }
+
     public void setNumber(int number){
         this.number= number;
     }

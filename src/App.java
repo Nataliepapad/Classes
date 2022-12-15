@@ -19,6 +19,7 @@ import Inheritance.Dog;
 import Inheritance.Fish;
 import Inheritance.Rectangle.Cuboid;
 import Inheritance.Rectangle.Rectangle;
+import Point.Point;
 import VipCustomer.VipCustomer;
 import WallArea.Wall;
 
@@ -36,6 +37,8 @@ public class App {
 
         myAccount.deposit(1000);
         myAccount.withdraw(400);
+
+        System.out.println("_____________________________________");
 
         VipCustomer person1 = new VipCustomer();
         System.out.println(person1.getCreditLimit());
@@ -160,6 +163,14 @@ public class App {
         printer2.printPages(10);
 
         System.out.println("_____________________________________");
+
+        Point first = new Point(6, 5);
+        Point second = new Point(3, 1);
+        System.out.println("distance(0,0)= " + first.distance());
+        System.out.println("distance(second)= " + first.distance(second));
+        System.out.println("distance(2,2)= " + first.distance(2, 2));
+        Point point = new Point();
+        System.out.println("distance()= " + point.distance());
 
     }
 }
