@@ -28,6 +28,14 @@ public class Worker {
         return 0.0;
     }
 
+    @Override
+    public String toString() {
+        return "Worker{" +
+                "name='" + name + '\'' +
+                ", birthDate='" + birthDate + '\'' +
+                ", endDate='" + endDate + '\'' +
+                '}';
+    }
 
     public String terminate(String endDate){
         return this.endDate = endDate;

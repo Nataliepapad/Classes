@@ -15,7 +15,7 @@ public class Employee extends Worker{
         return "Employee{" +
                 "employeeId=" + employeeId +
                 ", hireDate='" + hireDate + '\'' +
-                '}';
+                '}' + super.toString();
     }
 
     public Employee(String name, String birthDate, String hireDate) {

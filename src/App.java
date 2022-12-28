@@ -23,6 +23,7 @@ import Point.Point;
 import VipCustomer.VipCustomer;
 import WallArea.Wall;
 import Worker.Employee;
+import Worker.HourlyEmployee;
 import Worker.SalariedEmployee;
 
 public class App {
@@ -188,5 +189,11 @@ public class App {
         alex.retire();
         System.out.println(alex.isRetired()? alex.getName() + " will receive a pension check of: $" + alex.collectPay()
                 : alex.getName() + " receives a monthly paycheck check of: $" + alex.collectPay());
+
+        HourlyEmployee katherine = new HourlyEmployee("Katherine" ,"08/09/1987" ,
+                                                    "07/06/2004", 15);
+        System.out.println(katherine);
+        System.out.println(katherine.getName() + " receives a daily paycheck check of: $" + katherine.collectPay());
+        System.out.println(katherine.getName() + " for the holidays will receive an hourly paycheck check of: $" + katherine.getDoublePay());
     }
 }
