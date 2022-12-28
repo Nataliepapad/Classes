@@ -22,6 +22,8 @@ import Inheritance.Rectangle.Rectangle;
 import Point.Point;
 import VipCustomer.VipCustomer;
 import WallArea.Wall;
+import Worker.Employee;
+import Worker.SalariedEmployee;
 
 public class App {
     public static void app(){
@@ -172,5 +174,19 @@ public class App {
         Point point = new Point();
         System.out.println("distance()= " + point.distance());
 
+        System.out.println("_____________________________________");
+
+        Employee natalie = new Employee("Natalie", "10/08/1993", "01/01/2023");
+        System.out.println(natalie);
+
+        SalariedEmployee alex = new SalariedEmployee("Alexander", "08/09/1987" , "07/06/2004", 12000);
+        System.out.println(alex);
+        System.out.println("Alexander is " + alex.getAge());
+        System.out.println(alex.isRetired()? alex.getName() + " will receive a pension check of: $" + alex.collectPay()
+                            : alex.getName() + " receives a monthly paycheck check of: $" + alex.collectPay());
+
+        alex.retire();
+        System.out.println(alex.isRetired()? alex.getName() + " will receive a pension check of: $" + alex.collectPay()
+                : alex.getName() + " receives a monthly paycheck check of: $" + alex.collectPay());
     }
 }
